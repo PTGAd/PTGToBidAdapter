@@ -1,0 +1,32 @@
+PODS:
+  - CocoaDebug (1.7.2)
+  - PTGAdFramework (2.2.64)
+  - ToBid-iOS (4.4.30):
+    - ToBid-iOS/ToBidSDK (= 4.4.30)
+  - ToBid-iOS/ToBidSDK (4.4.30)
+  - YYCategories (1.0.4):
+    - YYCategories/no-arc (= 1.0.4)
+  - YYCategories/no-arc (1.0.4)
+
+DEPENDENCIES:
+  - CocoaDebug
+  - PTGAdFramework (= 2.2.64)
+  - ToBid-iOS (= 4.4.30)
+  - YYCategories
+
+SPEC REPOS:
+  trunk:
+    - CocoaDebug
+    - PTGAdFramework
+    - ToBid-iOS
+    - YYCategories
+
+SPEC CHECKSUMS:
+  CocoaDebug: 61cf93ada6ce8f3407507dc01f9b874d91ac1d5c
+  PTGAdFramework: 8d189f9f1015fce4bd8d66ea7bec5e76097bdd7a
+  ToBid-iOS: a6e8b7aaec89826ec5cd820cf94011012b8dc7f0
+  YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
+
+PODFILE CHECKSUM: a27246346012e6f3977f5aaf95d027cc92d4ee95
+
+COCOAPODS: 1.16.2

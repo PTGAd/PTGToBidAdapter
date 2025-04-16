@@ -1,0 +1,14 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '11.0'
+
+target 'PTGToBidDemo' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'ToBid-iOS','4.4.30'
+  pod 'PTGAdFramework','2.2.64'
+  pod 'YYCategories'
+  pod 'CocoaDebug'
+
+  # Pods for PTGToBidDemo
+
+end

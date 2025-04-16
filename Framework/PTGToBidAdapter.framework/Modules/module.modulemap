@@ -1,0 +1,6 @@
+framework module PTGToBidAdapter {
+  umbrella header "PTGToBidAdapter.h"
+  export *
+
+  module * { export * }
+}

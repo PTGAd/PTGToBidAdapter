@@ -21,7 +21,7 @@ Pod::Spec.new do |spec|
   spec.license      = "MIT"
 
 
-  spec.author             = { "xiangrongsu" => "15139093304@163.com" }
+  spec.author             = { "fancy" => "ptg_all@fancydigital.com.cn" }
 
   spec.source       = { :git => "https://github.com/PTGAd/PTGToBidAdapter", :tag => "#{spec.version }" }
 

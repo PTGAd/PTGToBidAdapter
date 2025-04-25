@@ -19,3 +19,12 @@ PTGToBidConfigAdapter
 ### 开屏
 PTGToBidSplashAdapter  
 
+### 信息流
+PTGToBidNativeAdapter  
+支持模板及自渲染信息流 默认模板，如需支持自渲染需在添加广告源代码位界面时，自定义配置信息中填写 {"self_render": "1"}
+
+### banner
+PTGToBidBannerAdapter  
+
+### 插屏
+PTGToBidInterstitialAdapter  

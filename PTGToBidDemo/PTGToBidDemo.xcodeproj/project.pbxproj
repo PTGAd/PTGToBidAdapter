@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2F37F25BD5BE87DA8F597CC5 /* Pods_PTGToBidDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0814403CE396CA4DEC6CBF /* Pods_PTGToBidDemo.framework */; };
-		9E34FB7E2DAFA144007233B4 /* PTGToBidAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E34FB7D2DAFA144007233B4 /* PTGToBidAdapter.framework */; };
+		9EA4A9642DB883F6001F03D2 /* PTGBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A9632DB883F6001F03D2 /* PTGBannerViewController.m */; };
+		9EA4A9712DB894BE001F03D2 /* PTGInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A9702DB894BE001F03D2 /* PTGInterstitialViewController.m */; };
+		9EA4A98D2DB8BF46001F03D2 /* PTGNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A98C2DB8BF46001F03D2 /* PTGNativeViewController.m */; };
+		9EA4A9C72DB9D681001F03D2 /* PTGNativeSelfRenderAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A9C62DB9D681001F03D2 /* PTGNativeSelfRenderAdView.m */; };
+		9EA4A9D52DBA0D33001F03D2 /* BUDFeedStyleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A9D32DBA0D33001F03D2 /* BUDFeedStyleHelper.m */; };
 		9ECEEF782DAE599000AAC2A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECEEF6B2DAE599000AAC2A7 /* AppDelegate.m */; };
 		9ECEEF792DAE599000AAC2A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECEEF702DAE599000AAC2A7 /* main.m */; };
 		9ECEEF7A2DAE599000AAC2A7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECEEF742DAE599000AAC2A7 /* SceneDelegate.m */; };
@@ -16,7 +20,7 @@
 		9ECEEF7C2DAE599000AAC2A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ECEEF6C2DAE599000AAC2A7 /* Assets.xcassets */; };
 		9ECEEF7E2DAE599000AAC2A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ECEEF6F2DAE599000AAC2A7 /* LaunchScreen.storyboard */; };
 		9ECEEF7F2DAE599000AAC2A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ECEEF722DAE599000AAC2A7 /* Main.storyboard */; };
-		9ECEEF8D2DAE5A9B00AAC2A7 /* PTGToBidSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECEEF8C2DAE5A9B00AAC2A7 /* PTGToBidSplashViewController.m */; };
+		9ECEEF8D2DAE5A9B00AAC2A7 /* PTGSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECEEF8C2DAE5A9B00AAC2A7 /* PTGSplashViewController.m */; };
 		9ECEEF902DAE5AD500AAC2A7 /* BaseAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECEEF8F2DAE5AD500AAC2A7 /* BaseAdViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +40,17 @@
 /* Begin PBXFileReference section */
 		6F511C4960BBF49EE2861663 /* Pods-PTGToBidDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTGToBidDemo.release.xcconfig"; path = "Target Support Files/Pods-PTGToBidDemo/Pods-PTGToBidDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9B3CF9FFADE58F728A3E47A1 /* Pods-PTGToBidDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTGToBidDemo.debug.xcconfig"; path = "Target Support Files/Pods-PTGToBidDemo/Pods-PTGToBidDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		9E34FB7D2DAFA144007233B4 /* PTGToBidAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PTGToBidAdapter.framework; sourceTree = "<group>"; };
+		9EA4A9622DB883F6001F03D2 /* PTGBannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGBannerViewController.h; sourceTree = "<group>"; };
+		9EA4A9632DB883F6001F03D2 /* PTGBannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGBannerViewController.m; sourceTree = "<group>"; };
+		9EA4A96F2DB894BE001F03D2 /* PTGInterstitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGInterstitialViewController.h; sourceTree = "<group>"; };
+		9EA4A9702DB894BE001F03D2 /* PTGInterstitialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGInterstitialViewController.m; sourceTree = "<group>"; };
+		9EA4A98B2DB8BF46001F03D2 /* PTGNativeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGNativeViewController.h; sourceTree = "<group>"; };
+		9EA4A98C2DB8BF46001F03D2 /* PTGNativeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGNativeViewController.m; sourceTree = "<group>"; };
+		9EA4A9C52DB9D681001F03D2 /* PTGNativeSelfRenderAdView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGNativeSelfRenderAdView.h; sourceTree = "<group>"; };
+		9EA4A9C62DB9D681001F03D2 /* PTGNativeSelfRenderAdView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGNativeSelfRenderAdView.m; sourceTree = "<group>"; };
+		9EA4A9D22DBA0D33001F03D2 /* BUDFeedStyleHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BUDFeedStyleHelper.h; sourceTree = "<group>"; };
+		9EA4A9D32DBA0D33001F03D2 /* BUDFeedStyleHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BUDFeedStyleHelper.m; sourceTree = "<group>"; };
+		9EA4A9D42DBA0D33001F03D2 /* BUDMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BUDMacros.h; sourceTree = "<group>"; };
 		9ECEEF4D2DAE598900AAC2A7 /* PTGToBidDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PTGToBidDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECEEF6A2DAE599000AAC2A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9ECEEF6B2DAE599000AAC2A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -49,8 +63,8 @@
 		9ECEEF742DAE599000AAC2A7 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		9ECEEF752DAE599000AAC2A7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9ECEEF762DAE599000AAC2A7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9ECEEF8B2DAE5A9B00AAC2A7 /* PTGToBidSplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGToBidSplashViewController.h; sourceTree = "<group>"; };
-		9ECEEF8C2DAE5A9B00AAC2A7 /* PTGToBidSplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGToBidSplashViewController.m; sourceTree = "<group>"; };
+		9ECEEF8B2DAE5A9B00AAC2A7 /* PTGSplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGSplashViewController.h; sourceTree = "<group>"; };
+		9ECEEF8C2DAE5A9B00AAC2A7 /* PTGSplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGSplashViewController.m; sourceTree = "<group>"; };
 		9ECEEF8E2DAE5AD500AAC2A7 /* BaseAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAdViewController.h; sourceTree = "<group>"; };
 		9ECEEF8F2DAE5AD500AAC2A7 /* BaseAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAdViewController.m; sourceTree = "<group>"; };
 		EB0814403CE396CA4DEC6CBF /* Pods_PTGToBidDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PTGToBidDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,7 +76,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F37F25BD5BE87DA8F597CC5 /* Pods_PTGToBidDemo.framework in Frameworks */,
-				9E34FB7E2DAFA144007233B4 /* PTGToBidAdapter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +88,47 @@
 				EB0814403CE396CA4DEC6CBF /* Pods_PTGToBidDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9EA4A9562DB87DF7001F03D2 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				9ECEEF8B2DAE5A9B00AAC2A7 /* PTGSplashViewController.h */,
+				9ECEEF8C2DAE5A9B00AAC2A7 /* PTGSplashViewController.m */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		9EA4A9572DB88091001F03D2 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				9EA4A9622DB883F6001F03D2 /* PTGBannerViewController.h */,
+				9EA4A9632DB883F6001F03D2 /* PTGBannerViewController.m */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		9EA4A9652DB89012001F03D2 /* Interstitial */ = {
+			isa = PBXGroup;
+			children = (
+				9EA4A96F2DB894BE001F03D2 /* PTGInterstitialViewController.h */,
+				9EA4A9702DB894BE001F03D2 /* PTGInterstitialViewController.m */,
+			);
+			path = Interstitial;
+			sourceTree = "<group>";
+		};
+		9EA4A98A2DB8BF2C001F03D2 /* Native */ = {
+			isa = PBXGroup;
+			children = (
+				9EA4A9D22DBA0D33001F03D2 /* BUDFeedStyleHelper.h */,
+				9EA4A9D32DBA0D33001F03D2 /* BUDFeedStyleHelper.m */,
+				9EA4A9D42DBA0D33001F03D2 /* BUDMacros.h */,
+				9EA4A98B2DB8BF46001F03D2 /* PTGNativeViewController.h */,
+				9EA4A98C2DB8BF46001F03D2 /* PTGNativeViewController.m */,
+				9EA4A9C52DB9D681001F03D2 /* PTGNativeSelfRenderAdView.h */,
+				9EA4A9C62DB9D681001F03D2 /* PTGNativeSelfRenderAdView.m */,
+			);
+			path = Native;
 			sourceTree = "<group>";
 		};
 		9ECEEF442DAE598900AAC2A7 = {
@@ -98,11 +152,12 @@
 		9ECEEF772DAE599000AAC2A7 /* PTGToBidDemo */ = {
 			isa = PBXGroup;
 			children = (
-				9E34FB7D2DAFA144007233B4 /* PTGToBidAdapter.framework */,
+				9EA4A98A2DB8BF2C001F03D2 /* Native */,
+				9EA4A9652DB89012001F03D2 /* Interstitial */,
+				9EA4A9572DB88091001F03D2 /* Banner */,
+				9EA4A9562DB87DF7001F03D2 /* Splash */,
 				9ECEEF8E2DAE5AD500AAC2A7 /* BaseAdViewController.h */,
 				9ECEEF8F2DAE5AD500AAC2A7 /* BaseAdViewController.m */,
-				9ECEEF8B2DAE5A9B00AAC2A7 /* PTGToBidSplashViewController.h */,
-				9ECEEF8C2DAE5A9B00AAC2A7 /* PTGToBidSplashViewController.m */,
 				9ECEEF6A2DAE599000AAC2A7 /* AppDelegate.h */,
 				9ECEEF6B2DAE599000AAC2A7 /* AppDelegate.m */,
 				9ECEEF6C2DAE599000AAC2A7 /* Assets.xcassets */,
@@ -261,11 +316,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EA4A9712DB894BE001F03D2 /* PTGInterstitialViewController.m in Sources */,
 				9ECEEF782DAE599000AAC2A7 /* AppDelegate.m in Sources */,
 				9ECEEF792DAE599000AAC2A7 /* main.m in Sources */,
 				9ECEEF902DAE5AD500AAC2A7 /* BaseAdViewController.m in Sources */,
-				9ECEEF8D2DAE5A9B00AAC2A7 /* PTGToBidSplashViewController.m in Sources */,
+				9ECEEF8D2DAE5A9B00AAC2A7 /* PTGSplashViewController.m in Sources */,
+				9EA4A9D52DBA0D33001F03D2 /* BUDFeedStyleHelper.m in Sources */,
 				9ECEEF7A2DAE599000AAC2A7 /* SceneDelegate.m in Sources */,
+				9EA4A9C72DB9D681001F03D2 /* PTGNativeSelfRenderAdView.m in Sources */,
+				9EA4A9642DB883F6001F03D2 /* PTGBannerViewController.m in Sources */,
+				9EA4A98D2DB8BF46001F03D2 /* PTGNativeViewController.m in Sources */,
 				9ECEEF7B2DAE599000AAC2A7 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,10 +362,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X5SRZ3HM32;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/PTGToBidDemo",
-				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PTGToBidDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -340,10 +396,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X5SRZ3HM32;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/PTGToBidDemo",
-				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PTGToBidDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

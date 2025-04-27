@@ -7,7 +7,8 @@
 
 #import "AppDelegate.h"
 #import <WindMillSDK/WindMillSDK.h>
-#import "PTGToBidSplashViewController.h"
+#import "ViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -20,8 +21,9 @@
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyWindow];
-    [WindMillAds setupSDKWithAppId:@"43492"];
-    self.window.rootViewController = [[PTGToBidSplashViewController alloc] init];
+    
+    [WindMillAds setupSDKWithAppId:@"57507"];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
     return YES;
 }
 

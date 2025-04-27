@@ -6,7 +6,7 @@
 ```shell
   pod 'ToBid-iOS','4.4.30'
   pod 'PTGAdFramework','2.2.64'
-  pod 'PTGToBidAdapter','1.0.0'
+  pod 'PTGToBidAdapter','2.2.64.0'
 ```
 
 ## 适配器相关

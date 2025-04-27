@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PTGToBidSplashViewController : BaseAdViewController
+@interface PTGSplashViewController : BaseAdViewController
 
 @end
 

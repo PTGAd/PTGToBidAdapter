@@ -31,6 +31,16 @@
     }
     self.isLoading = YES;
     self.statusLabel.text = @"广告加载中";
+    [self.splashAd loadAd];
+}
+
+
+- (void)showAd:(UIButton *)sender {
+    if (!self.splashAd.isAdReady) {
+        self.statusLabel.text = @"广告已过期";
+        return;
+    }
+
     UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 80)];
     UIImageView *logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SplashLogo"]];
     logo.accessibilityIdentifier = @"splash_logo";
@@ -38,13 +48,8 @@
     logo.center = bottomView.center;
     [bottomView addSubview:logo];
     bottomView.backgroundColor = [UIColor whiteColor];
-    [self.splashAd loadAdAndShowWithBottomView:bottomView];
-}
-
-
-- (void)showAd:(UIButton *)sender {
-
-    [self.splashAd showAdInWindow:self.view.window withBottomView:nil];
+    [self.splashAd showAdInWindow:self.view.window withBottomView:bottomView];
+    self.statusLabel.text = @"广告展示中";
 }
 
 
@@ -71,6 +76,7 @@
 - (void)onSplashAdFailToPresent:(WindMillSplashAd *)splashAd withError:(NSError *)error {
     NSLog(@"%@ -- %@", NSStringFromSelector(_cmd), splashAd.placementId);
     NSLog(@"%@", error);
+    self.statusLabel.text = @"广告展示失败";
     self.splashAd.delegate = nil;
     self.splashAd = nil;
 }
@@ -88,6 +94,7 @@
 }
 
 - (void)onSplashAdClosed:(WindMillSplashAd *)splashAd {
+    self.statusLabel.text = @"广告待加载";
     NSLog(@"开屏关闭%@ -- %@", NSStringFromSelector(_cmd), splashAd.placementId);
 }
 

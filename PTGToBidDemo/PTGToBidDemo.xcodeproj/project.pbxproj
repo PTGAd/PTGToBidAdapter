@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F37F25BD5BE87DA8F597CC5 /* Pods_PTGToBidDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0814403CE396CA4DEC6CBF /* Pods_PTGToBidDemo.framework */; };
+		9E3B41E32DE43D98001082EC /* PTGToBidAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3B41E22DE43D98001082EC /* PTGToBidAdapter.framework */; };
 		9EA4A9642DB883F6001F03D2 /* PTGBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A9632DB883F6001F03D2 /* PTGBannerViewController.m */; };
 		9EA4A9712DB894BE001F03D2 /* PTGInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A9702DB894BE001F03D2 /* PTGInterstitialViewController.m */; };
 		9EA4A98D2DB8BF46001F03D2 /* PTGNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A98C2DB8BF46001F03D2 /* PTGNativeViewController.m */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		6F511C4960BBF49EE2861663 /* Pods-PTGToBidDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTGToBidDemo.release.xcconfig"; path = "Target Support Files/Pods-PTGToBidDemo/Pods-PTGToBidDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9B3CF9FFADE58F728A3E47A1 /* Pods-PTGToBidDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTGToBidDemo.debug.xcconfig"; path = "Target Support Files/Pods-PTGToBidDemo/Pods-PTGToBidDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		9E3B41E22DE43D98001082EC /* PTGToBidAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PTGToBidAdapter.framework; sourceTree = "<group>"; };
 		9EA4A9622DB883F6001F03D2 /* PTGBannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGBannerViewController.h; sourceTree = "<group>"; };
 		9EA4A9632DB883F6001F03D2 /* PTGBannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGBannerViewController.m; sourceTree = "<group>"; };
 		9EA4A96F2DB894BE001F03D2 /* PTGInterstitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGInterstitialViewController.h; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F37F25BD5BE87DA8F597CC5 /* Pods_PTGToBidDemo.framework in Frameworks */,
+				9E3B41E32DE43D98001082EC /* PTGToBidAdapter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +155,7 @@
 		9ECEEF772DAE599000AAC2A7 /* PTGToBidDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9E3B41E22DE43D98001082EC /* PTGToBidAdapter.framework */,
 				9EA4A98A2DB8BF2C001F03D2 /* Native */,
 				9EA4A9652DB89012001F03D2 /* Interstitial */,
 				9EA4A9572DB88091001F03D2 /* Banner */,
@@ -362,6 +366,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X5SRZ3HM32;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PTGToBidDemo",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PTGToBidDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -396,6 +404,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X5SRZ3HM32;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PTGToBidDemo",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PTGToBidDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

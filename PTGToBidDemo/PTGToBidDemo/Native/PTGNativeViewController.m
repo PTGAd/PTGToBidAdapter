@@ -19,8 +19,9 @@ PTGNativeSelfRenderAdViewDislikeDelgate
 >
 
 @property(nonatomic,strong)WindMillNativeAdsManager *adManager;
-@property(nonatomic,strong)NSMutableArray<WindMillNativeAdView *> *ads;
-@property(nonatomic,strong)UITableView *tableView;
+@property(nonatomic,strong)WindMillNativeAd *nativeAd;
+@property(nonatomic,strong)UIView *nativeAdView;
+
 
 @end
 
@@ -28,19 +29,11 @@ PTGNativeSelfRenderAdViewDislikeDelgate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.ads = [NSMutableArray array];
-    [self addChildViewsAndLayout];
 }
 
-- (void)addChildViewsAndLayout {
-    [self.view insertSubview:self.tableView atIndex:0];
-    
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
-}
 
 - (void)loadAd:(UIButton *)sender {
+    self.statusLabel.text = @"广告加载中";
     WindMillAdRequest *request = [WindMillAdRequest request];
     request.placementId = @"8842451763315458";
     self.adManager = [[WindMillNativeAdsManager alloc] initWithRequest:request];
@@ -50,83 +43,66 @@ PTGNativeSelfRenderAdViewDislikeDelgate
 }
 
 - (void)showAd:(UIButton *)sender {
-    [WindMillNativeAdView alloc];
-}
-
-#pragma mark - UITableViewDataSource -
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.ads.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *identifier = NSStringFromClass(UITableViewCell.class);
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    [[cell viewWithTag:100002] removeFromSuperview];
-    WindMillNativeAdView *ad = self.ads[indexPath.row];
-    ad.tag = 100002;
-    [cell.contentView addSubview:ad];
-    [ad mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(cell.contentView);
-    }];
-    return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    WindMillNativeAdView *view = self.ads[indexPath.row];
-    if (view.nativeAd.feedADMode == WindMillFeedADModeNativeExpress) {
-        return view.bounds.size.height;
+    if (!self.nativeAd.isAdReady) {
+        NSLog(@"广告已过期");
+        return;
     }
-    return [PTGNativeSelfRenderAdView cellHeightWithModel:view.nativeAd width:UIScreen.mainScreen.bounds.size.width];
+    if (self.nativeAd.feedADMode == WindMillFeedADModeNativeExpress) {
+        WindMillNativeAdView *view = [[WindMillNativeAdView alloc] init];
+        view.delegate = self;
+        view.viewController = self;
+        [view refreshData:self.nativeAd];
+        view.frame = CGRectMake(0, 100, view.bounds.size.width, view.bounds.size.height);
+        self.nativeAdView = view;
+        [self.view addSubview:view];
+    } else {
+        PTGNativeSelfRenderAdView *view = [[PTGNativeSelfRenderAdView alloc] init];
+        view.delegate = self;
+        view.dislikeDelegate = self;
+        view.viewController = self;
+        [view refreshData:self.nativeAd];
+        CGFloat h = [PTGNativeSelfRenderAdView cellHeightWithModel:view.nativeAd width:UIScreen.mainScreen.bounds.size.width];
+        view.frame = CGRectMake(0, 100, UIScreen.mainScreen.bounds.size.width, h);
+        self.nativeAdView = view;
+        [self.view addSubview:view];
+    }
+    self.statusLabel.text = @"广告展示中";
 }
 
 #pragma mark - PTGNativeSelfRenderAdViewDislikeDelgate -
 - (void)feedCustomDislike:(PTGNativeSelfRenderAdView *)nativeAdView {
-    [self.ads removeObject:nativeAdView];
-    [self.tableView reloadData];
+    self.nativeAd = nil;
+    [self.nativeAdView removeFromSuperview];
+    self.nativeAdView = nil;
 }
 
 #pragma mark - WindMillNativeAdsManagerDelegate -
 - (void)nativeAdsManagerSuccessToLoad:(WindMillNativeAdsManager *)adsManager {
     if (adsManager.getAllNativeAds.count == 0) { return; }
     NSLog(@"信息流广告加载成功");
-    NSMutableArray *views = [NSMutableArray new];
-    [adsManager.getAllNativeAds enumerateObjectsUsingBlock:^(WindMillNativeAd * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (obj.feedADMode == WindMillFeedADModeNativeExpress) {
-            WindMillNativeAdView *view = [[WindMillNativeAdView alloc] init];
-            view.delegate = self;
-            view.viewController = self;
-            [view refreshData:obj];
-            [views addObject:view];
-        } else {
-            PTGNativeSelfRenderAdView *view = [[PTGNativeSelfRenderAdView alloc] init];
-            view.delegate = self;
-            view.dislikeDelegate = self;
-            view.viewController = self;
-            [view refreshData:obj];
-            [views addObject:view];
-        }
-    }];
-    [self.ads addObjectsFromArray:views];
-    [self.tableView reloadData];
+    self.statusLabel.text = @"广告加载成功";
+    WindMillNativeAd *nativeAd = adsManager.getAllNativeAds.firstObject;
+    self.nativeAd = nativeAd;
 }
 
 - (void)nativeAdsManager:(WindMillNativeAdsManager *)adsManager didFailWithError:(NSError *)error {
     NSLog(@"信息流广告加载失败");
+    self.statusLabel.text = @"广告加载失败";
 }
 
 
 #pragma mark - WindMillNativeAdViewDelegate
 - (void)nativeExpressAdViewRenderSuccess:(WindMillNativeAdView *)nativeExpressAdView {
     NSLog(@"信息流广告渲染成功");
-    [self.tableView reloadData];
+    self.statusLabel.text = @"广告渲染成功";
 }
 
 - (void)nativeExpressAdViewRenderFail:(WindMillNativeAdView *)nativeExpressAdView error:(NSError *)error {
     NSLog(@"信息流广告渲染失败");
-    [self.ads removeObject:nativeExpressAdView];
-    [self.tableView reloadData];
+    self.statusLabel.text = @"广告渲染失败";
+    self.nativeAd = nil;
+    [self.nativeAdView removeFromSuperview];
+    self.nativeAdView = nil;
 }
 
 /**
@@ -170,8 +146,10 @@ PTGNativeSelfRenderAdViewDislikeDelgate
 
 - (void)nativeAdView:(WindMillNativeAdView *)nativeAdView dislikeWithReason:(NSArray<WindMillDislikeWords *> *)filterWords {
     NSLog(@"信息流广告关闭");
-    [self.ads removeObject:nativeAdView];
-    [self.tableView reloadData];
+    self.statusLabel.text = @"广告待加载";
+    self.nativeAd = nil;
+    [self.nativeAdView removeFromSuperview];
+    self.nativeAdView = nil;
 }
 
 /**
@@ -186,15 +164,4 @@ PTGNativeSelfRenderAdViewDislikeDelgate
 }
 
 
-- (UITableView *)tableView {
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        _tableView.backgroundColor = [UIColor clearColor];
-        [_tableView registerClass:UITableViewCell.class forCellReuseIdentifier:NSStringFromClass(UITableViewCell.class)];
-    }
-    return _tableView;
-}
 @end

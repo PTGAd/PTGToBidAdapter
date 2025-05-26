@@ -36,11 +36,16 @@
 }
 
 - (void)showAd:(UIButton *)sender {
+    if (!self.intersititialAd.isAdReady) {
+        self.statusLabel.text = @"广告已过期";
+        return;
+    }
     self.statusLabel.text = @"";
     [self.intersititialAd showAdFromRootViewController:self options:@{
         WindMillAdSceneDesc: @"测试场景",
         WindMillAdSceneId: @"1"
     }];
+    self.statusLabel.text = @"广告展示中";
 }
 
 #pragma mark - WindMillIntersititialAdDelegate -
@@ -74,10 +79,11 @@
 
 - (void)intersititialAdDidClose:(WindMillIntersititialAd *)intersititialAd {
     NSLog(@"插屏广告关闭");
+    self.statusLabel.text = @"广告待加载";
 }
 
 - (void)intersititialAdDidPlayFinish:(WindMillIntersititialAd *)intersititialAd didFailWithError:(NSError *)error {
-
+    NSLog(@"插屏广告展示失败");
 }
 
 @end

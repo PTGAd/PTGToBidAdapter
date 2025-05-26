@@ -19,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.showAdButton.hidden = YES;
     // Do any additional setup after loading the view.
 }
 
@@ -28,6 +27,7 @@
         [self.bannerView removeFromSuperview];
         self.bannerView = nil;
     }
+    self.statusLabel.text = @"广告加载中";
     WindMillAdRequest *request = [WindMillAdRequest request];
     request.placementId = @"2282951722442870";
     self.bannerView = [[WindMillBannerView alloc] initWithRequest:request expectSize:CGSizeMake(300, 80)];
@@ -35,6 +35,20 @@
     self.bannerView.viewController = self;
     self.bannerView.animated = true;
     [self.bannerView loadAdData];
+}
+
+- (void)showAd:(UIButton *)sender {
+    if (!self.bannerView.isAdValid) {
+        NSLog(@"广告已过期");
+        self.statusLabel.text = @"广告已过期";
+        return;
+    }
+    
+    CGSize adSize = self.bannerView.adSize;
+    CGFloat space = (UIScreen.mainScreen.bounds.size.width - adSize.width)/2.0;
+    self.bannerView.frame = CGRectMake(space, 200, adSize.width, adSize.height);
+    [self.view addSubview:self.bannerView];
+    self.statusLabel.text = @"广告展示中";
 }
 
 #pragma mark - WindMillBannerViewDelegate -
@@ -52,16 +66,14 @@
 //成功加载广告
 - (void)bannerAdViewLoadSuccess:(WindMillBannerView *)bannerAdView {
     NSLog(@"横幅广告加载成功");
-    CGSize adSize = bannerAdView.adSize;
-    CGFloat space = (UIScreen.mainScreen.bounds.size.width - adSize.width)/2.0;
-    bannerAdView.frame = CGRectMake(space, 200, adSize.width, adSize.height);
-    [self.view addSubview:self.bannerView];
-    
+    self.statusLabel.text = @"广告加载成功";
+    self.bannerView = bannerAdView;
 }
     
 //广告加载失败
 - (void)bannerAdViewFailedToLoad:(WindMillBannerView *)bannerAdView error:(NSError *)error {
     NSLog(@"横幅广告加载失败 error = %@",error);
+    self.statusLabel.text = @"广告加载失败";
 }
 //广告将要展示
 - (void)bannerAdViewWillExpose:(WindMillBannerView *)bannerAdView {
@@ -86,6 +98,7 @@
 //广告视图被移除
 - (void)bannerAdViewDidRemoved:(WindMillBannerView *)bannerAdView {
     NSLog(@"横幅广告关闭");
+    self.statusLabel.text = @"广告待加载";
     [self.bannerView removeFromSuperview];
     self.bannerView.delegate = nil;
     self.bannerView = nil;

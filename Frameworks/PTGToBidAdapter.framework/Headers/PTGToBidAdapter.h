@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-//! Project version number for PTGToBidAdapter.
+//! Project version number for PTGToBidAdapter. 2.2.72.0
 FOUNDATION_EXPORT double PTGToBidAdapterVersionNumber;
 
 //! Project version string for PTGToBidAdapter.

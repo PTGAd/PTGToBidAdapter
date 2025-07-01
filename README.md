@@ -4,9 +4,9 @@
 使用CocoaPods导入SDK
 
 ```shell
-  pod 'ToBid-iOS','4.4.30'
-  pod 'PTGAdFramework','2.2.72'
-  pod 'PTGToBidAdapter','2.2.72.0'
+  pod 'ToBid-iOS','~> 4.5.0'
+  pod 'PTGAdFramework','2.2.76'
+  pod 'PTGToBidAdapter','2.2.76.0'
 ```
 
 ## 适配器相关
@@ -28,3 +28,7 @@ PTGToBidBannerAdapter
 
 ### 插屏
 PTGToBidInterstitialAdapter  
+插屏默认点击广告后不关闭，如果需要点击后关闭插屏，可以在tobid自定义配置中填写 {"closeAfterClick":"1"}
+
+### 激励
+PTGToBidRewardedVideoAdapter  

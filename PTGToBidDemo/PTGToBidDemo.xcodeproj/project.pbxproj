@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2F37F25BD5BE87DA8F597CC5 /* Pods_PTGToBidDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0814403CE396CA4DEC6CBF /* Pods_PTGToBidDemo.framework */; };
-		9E3B41E32DE43D98001082EC /* PTGToBidAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3B41E22DE43D98001082EC /* PTGToBidAdapter.framework */; };
 		9EA4A9642DB883F6001F03D2 /* PTGBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A9632DB883F6001F03D2 /* PTGBannerViewController.m */; };
 		9EA4A9712DB894BE001F03D2 /* PTGInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A9702DB894BE001F03D2 /* PTGInterstitialViewController.m */; };
 		9EA4A98D2DB8BF46001F03D2 /* PTGNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4A98C2DB8BF46001F03D2 /* PTGNativeViewController.m */; };
@@ -23,6 +22,7 @@
 		9ECEEF7F2DAE599000AAC2A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ECEEF722DAE599000AAC2A7 /* Main.storyboard */; };
 		9ECEEF8D2DAE5A9B00AAC2A7 /* PTGSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECEEF8C2DAE5A9B00AAC2A7 /* PTGSplashViewController.m */; };
 		9ECEEF902DAE5AD500AAC2A7 /* BaseAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECEEF8F2DAE5AD500AAC2A7 /* BaseAdViewController.m */; };
+		9EE6A4612E13BB04008BD834 /* PTGRewardVideoAdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE6A45F2E13BB04008BD834 /* PTGRewardVideoAdController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,7 +41,6 @@
 /* Begin PBXFileReference section */
 		6F511C4960BBF49EE2861663 /* Pods-PTGToBidDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTGToBidDemo.release.xcconfig"; path = "Target Support Files/Pods-PTGToBidDemo/Pods-PTGToBidDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9B3CF9FFADE58F728A3E47A1 /* Pods-PTGToBidDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTGToBidDemo.debug.xcconfig"; path = "Target Support Files/Pods-PTGToBidDemo/Pods-PTGToBidDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		9E3B41E22DE43D98001082EC /* PTGToBidAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PTGToBidAdapter.framework; sourceTree = "<group>"; };
 		9EA4A9622DB883F6001F03D2 /* PTGBannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGBannerViewController.h; sourceTree = "<group>"; };
 		9EA4A9632DB883F6001F03D2 /* PTGBannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGBannerViewController.m; sourceTree = "<group>"; };
 		9EA4A96F2DB894BE001F03D2 /* PTGInterstitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGInterstitialViewController.h; sourceTree = "<group>"; };
@@ -69,6 +68,8 @@
 		9ECEEF8C2DAE5A9B00AAC2A7 /* PTGSplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGSplashViewController.m; sourceTree = "<group>"; };
 		9ECEEF8E2DAE5AD500AAC2A7 /* BaseAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAdViewController.h; sourceTree = "<group>"; };
 		9ECEEF8F2DAE5AD500AAC2A7 /* BaseAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAdViewController.m; sourceTree = "<group>"; };
+		9EE6A45E2E13BB04008BD834 /* PTGRewardVideoAdController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTGRewardVideoAdController.h; sourceTree = "<group>"; };
+		9EE6A45F2E13BB04008BD834 /* PTGRewardVideoAdController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTGRewardVideoAdController.m; sourceTree = "<group>"; };
 		EB0814403CE396CA4DEC6CBF /* Pods_PTGToBidDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PTGToBidDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -78,7 +79,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F37F25BD5BE87DA8F597CC5 /* Pods_PTGToBidDemo.framework in Frameworks */,
-				9E3B41E32DE43D98001082EC /* PTGToBidAdapter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +155,7 @@
 		9ECEEF772DAE599000AAC2A7 /* PTGToBidDemo */ = {
 			isa = PBXGroup;
 			children = (
-				9E3B41E22DE43D98001082EC /* PTGToBidAdapter.framework */,
+				9EE6A4602E13BB04008BD834 /* Reward */,
 				9EA4A98A2DB8BF2C001F03D2 /* Native */,
 				9EA4A9652DB89012001F03D2 /* Interstitial */,
 				9EA4A9572DB88091001F03D2 /* Banner */,
@@ -175,6 +175,15 @@
 				9ECEEF762DAE599000AAC2A7 /* ViewController.m */,
 			);
 			path = PTGToBidDemo;
+			sourceTree = "<group>";
+		};
+		9EE6A4602E13BB04008BD834 /* Reward */ = {
+			isa = PBXGroup;
+			children = (
+				9EE6A45E2E13BB04008BD834 /* PTGRewardVideoAdController.h */,
+				9EE6A45F2E13BB04008BD834 /* PTGRewardVideoAdController.m */,
+			);
+			path = Reward;
 			sourceTree = "<group>";
 		};
 		D0460F2BB0299E9F3DBC2450 /* Pods */ = {
@@ -323,6 +332,7 @@
 				9EA4A9712DB894BE001F03D2 /* PTGInterstitialViewController.m in Sources */,
 				9ECEEF782DAE599000AAC2A7 /* AppDelegate.m in Sources */,
 				9ECEEF792DAE599000AAC2A7 /* main.m in Sources */,
+				9EE6A4612E13BB04008BD834 /* PTGRewardVideoAdController.m in Sources */,
 				9ECEEF902DAE5AD500AAC2A7 /* BaseAdViewController.m in Sources */,
 				9ECEEF8D2DAE5A9B00AAC2A7 /* PTGSplashViewController.m in Sources */,
 				9EA4A9D52DBA0D33001F03D2 /* BUDFeedStyleHelper.m in Sources */,

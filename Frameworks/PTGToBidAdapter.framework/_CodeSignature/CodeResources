@@ -4,17 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		3y++sUAKzaCQmjLBz2v0kvESHgc=
-		</data>
 		<key>Headers/PTGToBidAdapter.h</key>
 		<data>
 		tqw4hmEnnDdbQHMS/BueU/+wIIk=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		B5gtAGnMs2KDFPnKG6lnG+q1X5I=
+		h45LDkSke8zN67rzzupkdZOgl8Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>

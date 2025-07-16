@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "PTGToBidAdapter"
-  spec.version      = "2.2.76.1"
+  spec.version      = "2.2.77.0"
   spec.summary      = "A short description of PTGToBidAdapter."
 
 

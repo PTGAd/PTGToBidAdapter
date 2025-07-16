@@ -2,7 +2,7 @@ PODS:
   - CocoaDebug (1.7.2)
   - Masonry (1.1.0)
   - PTGAdFramework (2.2.76)
-  - PTGToBidAdapter (2.2.76.0)
+  - PTGToBidAdapter (2.2.76.1)
   - ToBid-iOS (4.5.0):
     - ToBid-iOS/ToBidSDK (= 4.5.0)
   - ToBid-iOS/ToBidSDK (4.5.0)
@@ -14,7 +14,7 @@ DEPENDENCIES:
   - CocoaDebug
   - Masonry
   - PTGAdFramework (= 2.2.76)
-  - PTGToBidAdapter (= 2.2.76.0)
+  - PTGToBidAdapter (= 2.2.76.1)
   - ToBid-iOS (= 4.5.0)
   - YYCategories
 
@@ -32,10 +32,10 @@ SPEC CHECKSUMS:
   CocoaDebug: 61cf93ada6ce8f3407507dc01f9b874d91ac1d5c
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   PTGAdFramework: 4ec4bf94376c599bc787e69d76d2fa31c8b8485e
-  PTGToBidAdapter: 288e9041eafe5aab6ab9c69696c24fc4d8cf6743
+  PTGToBidAdapter: 0ac81aa27e294786a2a56445334545640c80a992
   ToBid-iOS: e8c0800e3417402fe9bb509783a9029037a505b3
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: 26c77f93dd76007b006d08f0893ceb19a545f4e6
+PODFILE CHECKSUM: 17ee22a8cd81ea2618fb7530a26b8fa0490e5832
 
 COCOAPODS: 1.16.2

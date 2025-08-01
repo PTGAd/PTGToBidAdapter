@@ -4,7 +4,7 @@
 使用CocoaPods导入SDK
 
 ```shell
-  pod 'ToBid-iOS','~> 4.5.3'
+  pod 'ToBid-iOS','~> 4.5.30'
   pod 'PTGAdFramework','2.2.80'
   pod 'PTGToBidAdapter','2.2.80.0'
 ```

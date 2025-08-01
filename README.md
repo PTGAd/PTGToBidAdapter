@@ -4,12 +4,12 @@
 使用CocoaPods导入SDK
 
 ```shell
-  pod 'ToBid-iOS','~> 4.5.0'
-  pod 'PTGAdFramework','2.2.77'
-  pod 'PTGToBidAdapter','2.2.77.0'
+  pod 'ToBid-iOS','~> 4.5.3'
+  pod 'PTGAdFramework','2.2.80'
+  pod 'PTGToBidAdapter','2.2.80.0'
 ```
-## 重要重要重要
-在广告展示前，需调用Tobid广告是否有效，只有当isAdReady (banner广告是 isAdValid) 为YES时，才展示广告，否则会造成广告展示失败，可能会造成线上数据gap
+## 使用Tobid适配器的媒体请注意
+在广告展示前，需调用Tobid广告是否有效，只有当isAdReady (banner广告是 isAdValid）为YES时，才展示广告。否则会造成广告展示失败，可能会造成线上展示数据存在差异从而引起媒体收益数据差异。
 
 ## 适配器相关
 需要在ToBid后台添加自定义广告平台

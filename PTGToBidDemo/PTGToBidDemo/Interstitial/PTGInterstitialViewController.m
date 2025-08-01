@@ -72,6 +72,9 @@
 - (void)intersititialAdDidClick:(WindMillIntersititialAd *)intersititialAd {
     NSLog(@"插屏广告点击");
 }
+- (void)intersititialAdDidCloseOtherController:(WindMillIntersititialAd *)intersititialAd withInteractionType:(WindMillInteractionType)interactionType {
+    NSLog(@"插屏详情页关闭%@ interactionType = %zd", NSStringFromSelector(_cmd), interactionType);
+}
 
 - (void)intersititialAdDidClickSkip:(WindMillIntersititialAd *)intersititialAd {
     

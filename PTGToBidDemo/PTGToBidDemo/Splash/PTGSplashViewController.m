@@ -109,7 +109,7 @@
 }
 
 - (void)onSplashAdDidCloseOtherControllerWithInteractionType:(WindMillInteractionType)interactionType {
-    
+    NSLog(@"开屏详情页关闭%@ interactionType = %zd", NSStringFromSelector(_cmd), interactionType);
 }
 
 - (WindMillSplashAd *)splashAd {

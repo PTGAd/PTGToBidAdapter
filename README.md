@@ -5,7 +5,7 @@
 
 ```shell
   pod 'ToBid-iOS','~> 4.5.30'
-  pod 'PTGAdFramework', '2.2.82'
+  pod 'PTGAdFramework', '2.2.84'
   pod 'PTGToBidAdapter','2.2.80.0'
 ```
 ## 使用Tobid适配器的媒体请注意

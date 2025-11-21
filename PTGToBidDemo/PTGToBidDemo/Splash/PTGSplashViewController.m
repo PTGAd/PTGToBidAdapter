@@ -57,7 +57,7 @@
 - (void)onSplashAdDidLoad:(WindMillSplashAd *)splashAd {
     self.isLoading = NO;
     self.statusLabel.text = @"广告加载成功";
-    NSLog(@"开屏加载成功%@ -- %@", NSStringFromSelector(_cmd), splashAd.placementId);
+    NSLog(@"开屏加载成功%@ -- %@ -- %d", NSStringFromSelector(_cmd), splashAd.placementId,splashAd.adInfo.networkId);
 }
 
 - (void)onSplashAdLoadFail:(WindMillSplashAd *)splashAd error:(NSError *)error {
@@ -70,7 +70,7 @@
 }
 
 - (void)onSplashAdSuccessPresentScreen:(WindMillSplashAd *)splashAd {
-    NSLog(@"开屏曝光%@ -- %@", NSStringFromSelector(_cmd), splashAd.placementId);
+    NSLog(@"开屏曝光%@ -- %@ -- %d", NSStringFromSelector(_cmd), splashAd.placementId,splashAd.adInfo.networkId);
 }
 
 - (void)onSplashAdFailToPresent:(WindMillSplashAd *)splashAd withError:(NSError *)error {
@@ -109,7 +109,7 @@
 }
 
 - (void)onSplashAdDidCloseOtherControllerWithInteractionType:(WindMillInteractionType)interactionType {
-    NSLog(@"开屏详情页关闭%@ interactionType = %zd", NSStringFromSelector(_cmd), interactionType);
+    NSLog(@"开屏详情页关闭%@ -- %ld", NSStringFromSelector(_cmd), interactionType);
 }
 
 - (WindMillSplashAd *)splashAd {

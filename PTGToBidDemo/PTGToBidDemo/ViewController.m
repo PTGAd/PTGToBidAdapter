@@ -11,9 +11,9 @@
 #import "PTGBannerViewController.h"
 #import "PTGInterstitialViewController.h"
 #import "PTGNativeViewController.h"
+#import "PTGRewardVideoAdController.h"
 #import <AdSupport/AdSupport.h>
 #import <AppTrackingTransparency/AppTrackingTransparency.h>
-#import "PTGRewardVideoAdController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)NSArray<NSString *> *items;

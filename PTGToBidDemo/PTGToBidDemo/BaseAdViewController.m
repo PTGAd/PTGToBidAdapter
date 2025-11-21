@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = UIColor.lightGrayColor;
     self.statusLabel.frame = CGRectMake(100, UIScreen.mainScreen.bounds.size.height - 160, 175, 30);
     self.showAdButton.frame = CGRectMake(100, UIScreen.mainScreen.bounds.size.height - 120, 175, 30);
     self.loadAdButton.frame = CGRectMake(100, UIScreen.mainScreen.bounds.size.height - 80, 175, 30);

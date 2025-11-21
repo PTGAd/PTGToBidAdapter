@@ -79,7 +79,7 @@ PTGNativeSelfRenderAdViewDislikeDelgate
 #pragma mark - WindMillNativeAdsManagerDelegate -
 - (void)nativeAdsManagerSuccessToLoad:(WindMillNativeAdsManager *)adsManager {
     if (adsManager.getAllNativeAds.count == 0) { return; }
-    NSLog(@"信息流广告加载成功");
+    NSLog(@"信息流广告加载成功 netwrokid = %d",adsManager.getAllNativeAds.firstObject.networkId);
     self.statusLabel.text = @"广告加载成功";
     WindMillNativeAd *nativeAd = adsManager.getAllNativeAds.firstObject;
     self.nativeAd = nativeAd;

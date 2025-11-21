@@ -40,7 +40,7 @@ static UIEdgeInsets const padding = {10, 15, 10, 15};
 
 - (void)refreshData:(WindMillNativeAd *)nativeAd {
     [super refreshData:nativeAd];
-    if (nativeAd.imageModelList.count == 0 || nativeAd.feedADMode == WindMillFeedADModeNativeExpress) { return; }
+    if (nativeAd.feedADMode == WindMillFeedADModeNativeExpress) { return; }
 
     CGFloat width = CGRectGetWidth(UIScreen.mainScreen.bounds);
     CGFloat contentWidth = (width - 2 * margin);
@@ -55,10 +55,23 @@ static UIEdgeInsets const padding = {10, 15, 10, 15};
     y += titleSize.height;
     y += 5;
     
-    AWMADImage *image = nativeAd.imageModelList.firstObject;
-    const CGFloat imageHeight = contentWidth * (image.height / image.width);
-    self.mainImageView.frame = CGRectMake(padding.left, y, contentWidth, imageHeight);
-    y += imageHeight;
+    if (nativeAd.isVideoAd) {
+        CGFloat videoHeight = contentWidth;
+        AWMADImage *image = nativeAd.videoCoverImage;
+        if (image.width > 0 && image.height > 0) {
+            videoHeight = contentWidth * (image.height / image.width);
+        }
+        self.mediaView.frame = CGRectMake(padding.left, y, contentWidth, videoHeight);
+        y += videoHeight;
+    } else {
+        CGFloat imageHeight = contentWidth;
+        AWMADImage *image = nativeAd.imageModelList.firstObject;
+        if (image.width > 0 && image.height > 0) {
+            imageHeight = contentWidth * (image.height / image.width);
+        }
+        self.mainImageView.frame = CGRectMake(padding.left, y, contentWidth, imageHeight);
+        y += imageHeight;
+    }
     y += 10;
     
     /// logo宽高比 3 ： 1
@@ -91,12 +104,23 @@ static UIEdgeInsets const padding = {10, 15, 10, 15};
     NSAttributedString *attributedText = [BUDFeedStyleHelper titleAttributeText:model.title];
     CGSize titleSize = [attributedText boundingRectWithSize:CGSizeMake(contentWidth, 0) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:0].size;
     
-    AWMADImage *image = model.imageModelList.firstObject;
-    if (image.width <= 0) {
-        return 0;
+    CGFloat mediaH = 0;
+    if (model.isVideoAd) {
+        CGFloat videoHeight = contentWidth;
+        AWMADImage *image = model.videoCoverImage;
+        if (image.width > 0 && image.height > 0) {
+            videoHeight = contentWidth * (image.height / image.width);
+        }
+        mediaH = videoHeight;
+    } else {
+        CGFloat imageHeight = contentWidth;
+        AWMADImage *image = model.imageModelList.firstObject;
+        if (image.width > 0 && image.height > 0) {
+            imageHeight = contentWidth * (image.height / image.width);
+        }
+        mediaH = imageHeight;
     }
-    const CGFloat imageHeight = contentWidth * (image.height / image.width);
-    return padding.top + titleSize.height + 5+ imageHeight + 10 + 20 + padding.bottom;
+    return padding.top + titleSize.height + 5 + mediaH + 10 + 20 + padding.bottom;
 }
 
 - (UIButton *)customDislikeBtn {

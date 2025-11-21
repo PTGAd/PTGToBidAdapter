@@ -11,6 +11,8 @@
 
 @property (nonatomic, strong) WindMillIntersititialAd *intersititialAd;
 @property (nonatomic, assign) BOOL isLoading;
+@property (nonatomic, strong) UIWindow *tempWindow;
+@property (nonatomic, strong) UIViewController *tempVC;
 
 @end
 
@@ -47,6 +49,21 @@
     }];
     self.statusLabel.text = @"广告展示中";
 }
+//- (void)showAd:(UIButton *)sender {
+//    if (!self.intersititialAd.isAdReady) {
+//        self.statusLabel.text = @"广告已过期";
+//        return;
+//    }
+//    
+//    self.tempWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    self.tempWindow.windowLevel = UIWindowLevelAlert + 1;
+//    self.tempVC = [[UIViewController alloc] init];
+//    self.tempWindow.rootViewController = self.tempVC;
+//    [self.tempWindow makeKeyAndVisible];
+//    self.tempWindow.backgroundColor = [UIColor redColor];
+//    [self.intersititialAd showAdFromRootViewController:self.tempVC options:nil];
+//
+//}
 
 #pragma mark - WindMillIntersititialAdDelegate -
 - (void)intersititialAdDidLoad:(WindMillIntersititialAd *)intersititialAd {
@@ -71,9 +88,7 @@
 
 - (void)intersititialAdDidClick:(WindMillIntersititialAd *)intersititialAd {
     NSLog(@"插屏广告点击");
-}
-- (void)intersititialAdDidCloseOtherController:(WindMillIntersititialAd *)intersititialAd withInteractionType:(WindMillInteractionType)interactionType {
-    NSLog(@"插屏详情页关闭%@ interactionType = %zd", NSStringFromSelector(_cmd), interactionType);
+    
 }
 
 - (void)intersititialAdDidClickSkip:(WindMillIntersititialAd *)intersititialAd {
@@ -87,6 +102,10 @@
 
 - (void)intersititialAdDidPlayFinish:(WindMillIntersititialAd *)intersititialAd didFailWithError:(NSError *)error {
     NSLog(@"插屏广告展示失败");
+}
+
+- (void)intersititialAdDidCloseOtherController:(WindMillIntersititialAd *)intersititialAd withInteractionType:(WindMillInteractionType)interactionType {
+    NSLog(@"插屏广告详情页关闭");
 }
 
 @end

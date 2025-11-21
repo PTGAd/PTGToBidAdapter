@@ -29,6 +29,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    WindMillAdRequest *request = [WindMillAdRequest request];
+    request.userId = @"12345";
+    request.rewardName = @"哈哈哈";
+    request.rewardAmount = 200;
+    request.placementId = @"8337164384653689";
+    _rewardVideoAd = [[WindMillRewardVideoAd alloc] initWithRequest:request];
+    _rewardVideoAd.delegate = self;
 
 }
 //
@@ -119,17 +126,5 @@
 }
 
 
-- (WindMillRewardVideoAd *)rewardVideoAd {
-    if (!_rewardVideoAd) {
-        WindMillAdRequest *request = [WindMillAdRequest request];
-        request.userId = @"12345";
-        request.rewardName = @"哈哈哈";
-        request.rewardAmount = 200;
-        request.placementId = @"8337164384653689";
-        _rewardVideoAd = [[WindMillRewardVideoAd alloc] initWithRequest:request];
-        _rewardVideoAd.delegate = self;
-    }
-    return _rewardVideoAd;
-}
 
 @end

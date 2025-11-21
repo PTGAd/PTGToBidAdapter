@@ -17,7 +17,7 @@ target 'PTGToBidDemo' do
   use_frameworks!
   pod 'ToBid-iOS','~> 4.5.30'
   pod 'PTGAdFramework','2.2.95'
-  pod 'PTGToBidAdapter','2.2.80.0'
+  pod 'PTGToBidAdapter','2.2.95.0'
   pod 'YYCategories'
   pod 'CocoaDebug'
   pod 'Masonry'

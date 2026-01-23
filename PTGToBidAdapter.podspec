@@ -39,8 +39,7 @@ to integrate with the ToBid advertising SDK.
     "CoreMotion",
     "Accelerate",
     "CoreGraphics",
-    "Security",
-    "CoreAudioTypes"
+    "Security"
   ]
 
   s.libraries = "c++", "resolv", "z", "sqlite3"

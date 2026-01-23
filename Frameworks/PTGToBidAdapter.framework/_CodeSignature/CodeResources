@@ -10,15 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		J5nLJJAkaNVEBzJSu1seEmvR7QM=
+		3x27UBJOoN0fpHUKIwFXoOjaEDo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		20FiuCSGb9blU6DyPI4PtugBL+w=
-		</data>
-		<key>PTGAdSDK.bundle/1</key>
-		<data>
-		+SMirA8jTbG51bJJ3yh43FKnyr8=
 		</data>
 		<key>PTGAdSDK.bundle/ad.png</key>
 		<data>
@@ -87,17 +83,6 @@
 			<key>hash2</key>
 			<data>
 			/EKHzbnj4x4+K3WstUcW1wJlGSwdqZ7NeVcfCHhoB6w=
-			</data>
-		</dict>
-		<key>PTGAdSDK.bundle/1</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			+SMirA8jTbG51bJJ3yh43FKnyr8=
-			</data>
-			<key>hash2</key>
-			<data>
-			31Xp8l41kytthUtQtzqGqqUH5vv1cj9XpRyQQ6P2ldk=
 			</data>
 		</dict>
 		<key>PTGAdSDK.bundle/ad.png</key>

@@ -10,7 +10,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		3x27UBJOoN0fpHUKIwFXoOjaEDo=
+		zs7nov/tWLW33zusSJNks0bnBB4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -65,10 +65,6 @@
 	<dict>
 		<key>Headers/PTGToBidAdapter.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			tqw4hmEnnDdbQHMS/BueU/+wIIk=
-			</data>
 			<key>hash2</key>
 			<data>
 			CshvJwFwponqrJuYlGFR0uEwUjFGSBzI4OdnjJAyHbE=
@@ -76,10 +72,6 @@
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			20FiuCSGb9blU6DyPI4PtugBL+w=
-			</data>
 			<key>hash2</key>
 			<data>
 			/EKHzbnj4x4+K3WstUcW1wJlGSwdqZ7NeVcfCHhoB6w=
@@ -87,10 +79,6 @@
 		</dict>
 		<key>PTGAdSDK.bundle/ad.png</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			hxnCwjKaZW7J2NMwbUFjuTiX5is=
-			</data>
 			<key>hash2</key>
 			<data>
 			BRd+WPekF8E/1XzhwapiMGE+9RRwWSFmGrQAuK+3Oas=
@@ -98,10 +86,6 @@
 		</dict>
 		<key>PTGAdSDK.bundle/ad_arrow.png</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			VYaGqu4P8m1GtXFmbFCDka+xkWo=
-			</data>
 			<key>hash2</key>
 			<data>
 			qL4mfxLaZC8GYeG5uigQIoNQuCIgCx+zo6fTnrD2Qnk=
@@ -109,10 +93,6 @@
 		</dict>
 		<key>PTGAdSDK.bundle/closed.png</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			7SFSjFrsl3tQYfiGm/Aw4yw6BQA=
-			</data>
 			<key>hash2</key>
 			<data>
 			KcGpWswRe0DZDGokIJypRmAPn7mO7nT+Dsbte/Tn6hI=
@@ -120,10 +100,6 @@
 		</dict>
 		<key>PTGAdSDK.bundle/fancy_logo.png</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			wc9VIU2BxWF9Z4F/u9wjVda/qqY=
-			</data>
 			<key>hash2</key>
 			<data>
 			QWfJWFfAB2F0eBJwTB4Lcyrbpoh6CSWB/puwRiomGTo=
@@ -131,10 +107,6 @@
 		</dict>
 		<key>PTGAdSDK.bundle/lace.png</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			r1NmLR0m7M+BQCQsocgNem4h0Po=
-			</data>
 			<key>hash2</key>
 			<data>
 			XFPbOnM1V6hQ0yOKao/WBYJ2EZj1UuQ/tJunV60hpRs=
@@ -142,10 +114,6 @@
 		</dict>
 		<key>PTGAdSDK.bundle/marks.png</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			msXr1ijnFZrNDd2JrrYn0fDSTXY=
-			</data>
 			<key>hash2</key>
 			<data>
 			qtASHb4lXXUNNPzYFxItWJzo17SqA4cYqhnEF3hpdVM=
@@ -153,10 +121,6 @@
 		</dict>
 		<key>PTGAdSDK.bundle/mute.png</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			DqP8GyPOd5i9JujtWf4z2buWzyo=
-			</data>
 			<key>hash2</key>
 			<data>
 			PSP7aVEYh22FIL0iYKlTKl82/gDXdcWqVjcj5Iu11uA=
@@ -164,10 +128,6 @@
 		</dict>
 		<key>PTGAdSDK.bundle/play_start.png</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			fwPlb8K26x9Nbxg9owXIZog4LUI=
-			</data>
 			<key>hash2</key>
 			<data>
 			cwVHwChdIC9tY6fKB670Onwx2RHI3SdhJJU2PS2NIyc=
@@ -175,10 +135,6 @@
 		</dict>
 		<key>PTGAdSDK.bundle/ptg_icon_shark.png</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			9ENQo6qT7DNqp4xdO/QzQO4+lrE=
-			</data>
 			<key>hash2</key>
 			<data>
 			+do+bhvJ8wAaAOrqdYLfw8u1Q8jJImS8kIaSvhmm+Pw=
@@ -186,10 +142,6 @@
 		</dict>
 		<key>PTGAdSDK.bundle/reward.png</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ECcJVnjQ25+J5neoslvGSbRbfCk=
-			</data>
 			<key>hash2</key>
 			<data>
 			PnO6A3RSk3tlKWhu2uNq1LHufRA9T3Tw/QG0uUyM6W8=
@@ -197,10 +149,6 @@
 		</dict>
 		<key>PTGAdSDK.bundle/voice.png</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			OLZL9fT2Bg/ofBQnGtLqZL/Lf4g=
-			</data>
 			<key>hash2</key>
 			<data>
 			cwRZIZ0qFQful29yEx4Q4f1qXiM26tktcOpZmsn6T3Q=

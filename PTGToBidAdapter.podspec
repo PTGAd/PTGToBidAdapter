@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "PTGToBidAdapter"
-  s.version      = "2.3.10.0"
+  s.version      = "2.3.20.0"
   s.summary      = "PTG mediation adapter for ToBid SDK."
   s.description  = <<-DESC
 PTGToBidAdapter is a mediation adapter that enables PTGAdFramework
@@ -55,7 +55,7 @@ to integrate with the ToBid advertising SDK.
   }
 
   # ✅ 明确依赖范围，防止拉到老版本
-  s.dependency "PTGAdFramework", ">= 2.3.1"
-  s.dependency "ToBid-iOS", ">= 4.7.0"
+  s.dependency "PTGAdFramework", ">= 2.3.8"
+  s.dependency "ToBid-iOS-RC", ">= 5.3.2"
 
 end

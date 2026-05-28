@@ -21,8 +21,9 @@
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyWindow];
-    
-    [WindMillAds setupSDKWithAppId:@"57507"];
+    [WindMillAds setupSDKWithAppId:@"57507" completionHandler:^(BOOL, NSError * _Nullable) {
+        
+    }];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
     return YES;
 }

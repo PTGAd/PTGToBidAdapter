@@ -15,7 +15,7 @@ target 'PTGToBidDemo' do
       end
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'ToBid-iOS-RC','5.3.2'
+  pod 'ToBid-iOS-RC','5.3.5'
   pod 'PTGAdFramework','2.3.8'
   pod 'PTGToBidAdapter','2.3.20.0'
   pod 'YYCategories'

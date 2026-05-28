@@ -92,7 +92,7 @@
     NSLog(@"激励已经展示%@ -- %@", NSStringFromSelector(_cmd), rewardVideoAd.placementId);
 }
 
-- (void)rewardVideoAdDidShowFailed:(WindMillRewardVideoAd *)rewardVideoAd error:(NSError *_Nullable)error {
+- (void)rewardVideoAdDidShowFailed:(WindMillRewardVideoAd *)rewardVideoAd error:(NSError *)error {
     NSLog(@"激励展示失败%@ -- %@", NSStringFromSelector(_cmd), rewardVideoAd.placementId);
 }
 

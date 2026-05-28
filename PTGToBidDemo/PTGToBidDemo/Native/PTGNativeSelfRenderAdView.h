@@ -6,6 +6,8 @@
 //
 
 #import <WindMillSDK/WindMillSDK.h>
+#import <UIKit/UIKit.h>
+
 
 NS_ASSUME_NONNULL_BEGIN
 @class PTGNativeSelfRenderAdView;
@@ -17,7 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-@interface PTGNativeSelfRenderAdView : WindMillNativeAdView
+@interface PTGNativeSelfRenderAdView : UIView
+
+@property(nonatomic, strong) WindMillNativeAdView *nativeAdView;
 
 @property(nonatomic,weak)id<PTGNativeSelfRenderAdViewDislikeDelgate> dislikeDelegate;
 + (CGFloat)cellHeightWithModel:(WindMillNativeAd *_Nonnull)model width:(CGFloat)width;

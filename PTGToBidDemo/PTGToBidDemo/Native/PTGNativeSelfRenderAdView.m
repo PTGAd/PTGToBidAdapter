@@ -28,6 +28,9 @@ static UIEdgeInsets const padding = {10, 15, 10, 15};
     if (self) {
         [self addSubview:self.titleLabel];
         [self addSubview:self.customDislikeBtn];
+        
+        self.nativeAdView = [[WindMillNativeAdView alloc] init];
+        [self addSubview:self.nativeAdView];
     }
     return self;
 }
@@ -39,7 +42,7 @@ static UIEdgeInsets const padding = {10, 15, 10, 15};
 }
 
 - (void)refreshData:(WindMillNativeAd *)nativeAd {
-    [super refreshData:nativeAd];
+//    [super refreshData:nativeAd];
     if (nativeAd.feedADMode == WindMillFeedADModeNativeExpress) { return; }
 
     CGFloat width = CGRectGetWidth(UIScreen.mainScreen.bounds);
@@ -61,7 +64,7 @@ static UIEdgeInsets const padding = {10, 15, 10, 15};
         if (image.width > 0 && image.height > 0) {
             videoHeight = contentWidth * (image.height / image.width);
         }
-        self.mediaView.frame = CGRectMake(padding.left, y, contentWidth, videoHeight);
+        self.nativeAdView.mediaView.frame = CGRectMake(padding.left, y, contentWidth, videoHeight);
         y += videoHeight;
     } else {
         CGFloat imageHeight = contentWidth;
@@ -69,14 +72,14 @@ static UIEdgeInsets const padding = {10, 15, 10, 15};
         if (image.width > 0 && image.height > 0) {
             imageHeight = contentWidth * (image.height / image.width);
         }
-        self.mainImageView.frame = CGRectMake(padding.left, y, contentWidth, imageHeight);
+        self.nativeAdView.mainImageView.frame = CGRectMake(padding.left, y, contentWidth, imageHeight);
         y += imageHeight;
     }
     y += 10;
     
     /// logo宽高比 3 ： 1
     CGFloat originInfoX = padding.left;
-    self.logoView.frame = CGRectMake(originInfoX,
+    self.nativeAdView.logoView.frame = CGRectMake(originInfoX,
                                              y + 3,
                                              42,
                                              14);
@@ -86,7 +89,7 @@ static UIEdgeInsets const padding = {10, 15, 10, 15};
     [self addSubview:self.customDislikeBtn];
     self.customDislikeBtn.frame = CGRectMake(dislikeX, y, 20, 20);
     
-    [self setClickableViews:@[self]];
+    [self.nativeAdView setClickableViews:@[self]];
 }
 
 - (UILabel *)titleLabel {

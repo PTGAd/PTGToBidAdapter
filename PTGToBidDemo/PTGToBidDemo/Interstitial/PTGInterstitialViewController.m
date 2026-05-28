@@ -43,10 +43,7 @@
         return;
     }
     self.statusLabel.text = @"";
-    [self.intersititialAd showAdFromRootViewController:self options:@{
-        WindMillAdSceneDesc: @"测试场景",
-        WindMillAdSceneId: @"1"
-    }];
+    [self.intersititialAd showAdFromRootViewController:self options:@{}];
     self.statusLabel.text = @"广告展示中";
 }
 //- (void)showAd:(UIButton *)sender {

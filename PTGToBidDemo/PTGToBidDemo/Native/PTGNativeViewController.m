@@ -57,11 +57,11 @@ PTGNativeSelfRenderAdViewDislikeDelgate
         [self.view addSubview:view];
     } else {
         PTGNativeSelfRenderAdView *view = [[PTGNativeSelfRenderAdView alloc] init];
-        view.delegate = self;
+        view.nativeAdView.delegate = self;
         view.dislikeDelegate = self;
-        view.viewController = self;
-        [view refreshData:self.nativeAd];
-        CGFloat h = [PTGNativeSelfRenderAdView cellHeightWithModel:view.nativeAd width:UIScreen.mainScreen.bounds.size.width];
+        view.nativeAdView.viewController = self;
+        [view.nativeAdView refreshData:self.nativeAd];
+        CGFloat h = [PTGNativeSelfRenderAdView cellHeightWithModel:view.nativeAdView.nativeAd width:UIScreen.mainScreen.bounds.size.width];
         view.frame = CGRectMake(0, 100, UIScreen.mainScreen.bounds.size.width, h);
         self.nativeAdView = view;
         [self.view addSubview:view];

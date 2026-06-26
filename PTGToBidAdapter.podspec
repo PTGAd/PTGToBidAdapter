@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "PTGToBidAdapter"
-  s.version      = "2.3.20.1"
+  s.version      = "2.2.96.0"
   s.summary      = "PTG mediation adapter for ToBid SDK."
   s.description  = <<-DESC
 PTGToBidAdapter is a mediation adapter that enables PTGAdFramework

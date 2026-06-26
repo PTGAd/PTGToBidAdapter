@@ -55,7 +55,6 @@ to integrate with the ToBid advertising SDK.
   }
 
   # ✅ 明确依赖范围，防止拉到老版本
-  s.dependency "PTGAdFramework", ">= 2.3.11"
-  s.dependency "ToBid-iOS-RC", ">= 5.3.2"
+  s.dependency "PTGAdFramework", ">= 2.3.13"
 
 end

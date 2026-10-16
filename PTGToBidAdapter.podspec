@@ -1,38 +1,61 @@
-Pod::Spec.new do |spec|
+Pod::Spec.new do |s|
 
-  # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  These will help people to find your library, and whilst it
-  #  can feel like a chore to fill in it's definitely to your advantage. The
-  #  summary should be tweet-length, and the description more in depth.
-  #
-
-  spec.name         = "PTGToBidAdapter"
-  spec.version      = "2.3.20.2"
-  spec.summary      = "A short description of PTGToBidAdapter."
-
-
-  spec.description  = <<-DESC
-    PTGAdFramework provides Union ADs which include native、banner、feed、splash、RewardVideo etc.
+  s.name         = "PTGToBidAdapter"
+  s.version      = "2.3.20.2"
+  s.summary      = "PTG mediation adapter for ToBid SDK."
+  s.description  = <<-DESC
+PTGToBidAdapter is a mediation adapter that enables PTGAdFramework
+to integrate with the ToBid advertising SDK.
   DESC
 
-  spec.homepage     = "https://github.com/PTGAd/PTGToBidAdapter"
+  s.homepage     = "https://github.com/PTGAd/PTGToBidAdapter"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
+  s.author       = { "fancy" => "ptg_all@fancydigital.com.cn" }
 
-  spec.license      = "MIT"
-
-
-  spec.author             = { "fancy" => "ptg_all@fancydigital.com.cn" }
-
-  spec.source       = { :git => "https://github.com/PTGAd/PTGToBidAdapter", :tag => "#{spec.version }" }
-
-
-  spec.platform     = :ios, "12.0"
-  spec.frameworks = 'UIKit', 'MapKit', 'WebKit', 'MediaPlayer', 'AdSupport', 'CoreMedia', 'AVFoundation', 'CoreTelephony', 'StoreKit', 'SystemConfiguration', 'MobileCoreServices', 'CoreMotion', 'Accelerate', 'CoreGraphics', 'Security'
-  spec.libraries = 'c++', 'resolv', 'z', 'sqlite3'
-  spec.vendored_frameworks =  'Frameworks/PTGToBidAdapter.framework'
-  valid_archs = ['armv7', 'armv7s', 'x86_64', 'arm64']
-  spec.xcconfig = {
-    'VALID_ARCHS' =>  valid_archs.join(' '),
+  s.source       = {
+    :git => "https://github.com/PTGAd/PTGToBidAdapter.git",
+    :tag => s.version.to_s
   }
+
+  # 🚨 必须 ≥ 12
+  s.platform = :ios, "12.0"
+
+  # ✅ adapter + vendored framework，必须 static
+  s.static_framework = true
+
+  s.vendored_frameworks = "Frameworks/PTGToBidAdapter.framework"
+
+  s.frameworks = [
+    "UIKit",
+    "WebKit",
+    "MediaPlayer",
+    "AdSupport",
+    "CoreMedia",
+    "AVFoundation",
+    "CoreTelephony",
+    "StoreKit",
+    "SystemConfiguration",
+    "MobileCoreServices",
+    "CoreMotion",
+    "Accelerate",
+    "CoreGraphics",
+    "Security"
+  ]
+
+  s.libraries = "c++", "resolv", "z", "sqlite3"
+
+  # 🚨 强制所有 Pod target 使用 iOS 12
+  s.pod_target_xcconfig = {
+    "IPHONEOS_DEPLOYMENT_TARGET" => "12.0",
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]" => "arm64"
+  }
+
+  s.user_target_xcconfig = {
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]" => "arm64"
+  }
+
+  # ✅ 明确依赖范围，防止拉到老版本
+  s.dependency "PTGAdFramework", ">= 2.3.11"
+  s.dependency "ToBid-iOS-RC", ">= 5.3.2"
 
 end
